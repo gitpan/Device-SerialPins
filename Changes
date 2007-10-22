@@ -1,5 +1,9 @@
 Revision history for Device-SerialPins
 
+v0.0.2 2007-10-21
+
+  * add diagnostics to Build.PL
+
 v0.0.1 2007-10-20
 
   * first public release

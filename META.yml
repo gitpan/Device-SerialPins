@@ -1,6 +1,6 @@
 ---
 name: Device-SerialPins
-version: v0.0.1
+version: v0.0.2
 author:
   - 'Eric Wilhelm @ <ewilhelm at cpan dot org>'
 abstract: per-pin low-level serial port access
@@ -16,7 +16,7 @@ build_requires:
 provides:
   Device::SerialPins:
     file: lib/Device/SerialPins.pm
-    version: v0.0.1
+    version: v0.0.2
   Device::SerialPins::Bits:
     file: lib/Device/SerialPins.pm
 generated_by: Module::Build version 0.2809

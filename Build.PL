@@ -29,6 +29,13 @@ my $builder = $build_class->new(
   },
 );
 
+unless(eval("package foo; require('sys/ioctl.ph'); 1")) {
+  warn "ERROR:  Your perl build has no 'sys/ioctl.ph' file.\n",
+    "  Perhaps try rebuilding it or running 'h2ph' (see perlfaq8.)\n",
+    "  (Or maybe we can't do ioctl on your OS?)\n";
+  exit 0;
+}
+
 $builder->create_build_script();
 
 # vi:syntax=perl:ts=2:sw=2:et:sta

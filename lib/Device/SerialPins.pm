@@ -1,5 +1,5 @@
 package Device::SerialPins;
-$VERSION = v0.0.1;
+$VERSION = v0.0.2;
 
 use warnings;
 use strict;
@@ -75,6 +75,10 @@ for my $n (qw(car dsr cts rng)) {
 
 my $bits;
 {
+  # get the constants from the perlheader file
+  # see `perldoc perlfunc` ioctl()
+  # and perlfaq5, perlfaq8
+  # also note:  Term::ReadLine::readline
   package Device::SerialPins::Bits;
   local $^W = 0; # suppress strange -w noise
   require 'sys/ioctl.ph';
